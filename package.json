@@ -1,0 +1,33 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vetint02/Note-taking-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Vetint02/Note-taking-app/issues"
+  },
+  "homepage": "https://github.com/Vetint02/Note-taking-app#readme",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.2.1",
+    "nodemon": "^3.1.14",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}

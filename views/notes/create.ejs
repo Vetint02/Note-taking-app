@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <h1><%= title %></h1>
+    <div class="create-sticky-container">
+        <form action="/notes/create" method="POST" class="giant-sticky-note">
+            <div class="sticky-header">
+                <input type="text" id="title" name="title" placeholder="Title...">
+            </div>
+            <div class="sticky-body">
+                <textarea id="note" name="note" placeholder="Write your note here..."></textarea>
+            </div>
+            <button type="submit" class="save-button">Save Note</button>
+        </form>
+    </div>
+    <%- include("../partials/footer") %>
+</body>
+</html>

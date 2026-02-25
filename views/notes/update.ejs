@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <h1><%= title %></h1>
+    <div class="create-sticky-container">
+        <form action="/notes/update/<%=content.postId%>" method="POST" class="giant-sticky-note">
+            <div class="sticky-header">
+                <input type="text" id="title" name="title" value="<%= content.title %>" placeholder="Title...">
+            </div>
+            <div class="sticky-body">
+                <textarea id="note" name="note" placeholder="Write your note here..."><%= content.note %></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="save-button">Update Note</button>
+            
+                <button type="submit" formaction="/notes/delete/<%= content.postId %>" method="POST" class="delete-button"
+                    onclick="return confirm('Are you sure you want to delete this note?')">
+                    Delete Note
+                </button>
+            </div>
+        </form>
+    </div>
+    <%- include("../partials/footer") %>
+</body>
+</html>

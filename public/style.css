@@ -1,0 +1,332 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keeps the bar at the very top */
+.navbar {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    /* Fixes it to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d1b2;
+    /* A nice highlight color */
+}
+
+.nav-links a.logout-link:hover {
+    color: #ff4b2b; /* A soft red color for logout */
+}
+
+.logout-item {
+    margin-left: auto;
+}
+
+
+/* CRITICAL: Adds space so page content doesn't hide behind the bar */
+body {
+    padding-top: 90px;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Centers the login box on the screen */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #555;
+}
+
+.new-user {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.new-user a {
+    color: #333;
+    text-decoration: none;
+}
+
+.new-user a:hover{
+    text-decoration: underline;
+}
+
+/* The container that holds all the notes */
+.sticky-container {
+    display: flex;
+    flex-wrap: wrap; /* This makes them loop to the next line */
+    gap: 20px;       /* Space between the notes */
+    padding: 20px;
+    justify-content: flex-start; /* Starts them from the left */
+}
+
+/* The individual sticky note box */
+.sticky-note {
+    background-color: #ffef7d; /* Classic yellow */
+    width: 200px;              /* Fixed width for the square look */
+    height: 200px;             /* Fixed height */
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);  /* Gives it a slightly "pasted on" look */
+    transition: transform 0.2s;
+    overflow-y: auto;          /* Scroll inside if the note is too long */
+    display: flex;
+    flex-direction: column;
+    position: relative;        /* To position the postId inside */
+    cursor: pointer;
+}
+
+/* Tilt it the other way on hover for a fun effect */
+.sticky-note:hover {
+    transform: rotate(1deg) scale(1.05);
+    background-color: #fff4a3;
+}
+
+.sticky-note h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
+
+.sticky-note p {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Optional: handwriting font */
+    font-size: 0.9rem;
+}
+
+/* Reset the link styling */
+.sticky-link {
+    text-decoration: none;
+    color: inherit; /* Keeps the text black/dark as you styled it */
+    display: block; /* Makes the whole area clickable */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Optional: Slight lift effect when hovering over the link */
+.sticky-link:hover {
+    transform: scale(1.05);
+}
+
+.sticky-link:hover .sticky-note {
+    background-color: #fff4a3; /* Slightly brighter yellow on hover */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-id {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: rgba(0,0,0,0.4);
+}
+
+/* Specific styling for the Create Note card */
+.create-note {
+    text-decoration: none; /* Remove underline from <a> */
+    color: #333;
+    width: 230px;              /* Fixed width for the square look */
+    height: 230px;             /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the icon vertically */
+    align-items: center;     /* Center the icon horizontally */
+    border: 2px dashed rgba(0, 0, 0, 0.2); /* Dashed border looks like a placeholder */
+    background-color: #f9f9f9; /* Slightly different color so it stands out */
+}
+
+.create-note:hover {
+    background-color: #fff4a3; /* Turns yellow on hover like the others */
+    border-style: solid;
+}
+
+.plus-icon {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.create-note p {
+    font-family: sans-serif; /* Keep the label clean */
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Darkens the background to make the "pop up" stand out */
+.create-sticky-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust based on your navbar height */
+    padding: 20px;
+}
+
+.giant-sticky-note {
+    background-color: #ffef7d; /* Classic sticky yellow */
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    padding: 30px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
+    transform: rotate(-1deg); /* Slight tilt for realism */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Title Input Styling */
+.sticky-header input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Body Textarea Styling */
+.sticky-body {
+    flex-grow: 1;
+}
+
+.sticky-body textarea {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none; /* Prevents user from breaking the square shape */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    outline: none;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Handwriting vibe */
+}
+
+/* Save Button Styling */
+.save-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end; /* Puts button in bottom right */
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.save-button:hover {
+    background-color: #555;
+}
+
+/* Container for the buttons */
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* Styles for the Delete button */
+.delete-button {
+    background-color: #e74c3c; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link href="/Style.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Welcome to my note taking app!</h1>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">MyNoteApp</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes">Notes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-box">
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <div class="new-user">
+                <a href="/users/create">Create account</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Roy Park. All rights reserved.</p>
+    </footer>
+</body>
+</html>

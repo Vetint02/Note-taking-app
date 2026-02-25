@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header", { title }) %>
+    <h1>
+        <%= title %>
+    </h1>
+    <div class="sticky-container">
+        <% notes.forEach(note=> { %>
+            <a href="/notes/update/<%= note.postId %>" class="sticky-link">
+                <div class="sticky-note">
+                    <h3>
+                        <%= note.title %>
+                    </h3>
+                    <p>
+                        <%= note.note %>
+                    </p>
+                    <span class="post-id">#<%= note.postId %></span>
+                </div>
+            </a>
+            <% }) %>
+        <form action="/notes" method="POST">
+            <button type="submit" class="sticky-note create-note">
+                <div class="plus-icon">+</div>
+                <p>Add New Note</p>
+            </button>
+        </form>
+    </div>
+    <%- include("../partials/footer") %>
+</body>
+</html>

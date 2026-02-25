@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header", { title }) %>
+            <main class="profile-container">
+                <div class="profile-card">
+                    <h1>Welcome, <%= username %>!</h1>
+
+                    <div class="stats-box">
+                        <p>You currently have <strong>
+                                <%= noteCount %>
+                            </strong> sticky notes.</p>
+                    </div>
+
+                    <div class="profile-actions">
+                        <a href="/notes" class="btn-secondary">View My Notes</a>
+                        <a href="/users/update" class="btn-warning">Change Password</a>
+                    </div>
+                </div>
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>
