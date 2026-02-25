@@ -13,7 +13,8 @@ This project will require you to download the following:
 * ejs
 * chalk
 
-if code doesn't work after npm install, you may need to manually download these dependencies.
+dependencies should download after `npm install`
+if code doesn't work after `npm install`, you may need to manually download these dependencies.
 
 # Set up
 
@@ -30,7 +31,7 @@ localhost:27017
 
 ```
 
-After mongoDB set up is complete, run `npm start` or `npm dev`
+`npm start` or `npm dev`
 
 if you recieved :
 ```
