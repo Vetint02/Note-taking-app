@@ -41,7 +41,7 @@ export async function updateUser(req, res, next) {
 
         if (username != req.user.username)
         {
-            const error = new Error("Not correct username");
+            const error = new Error("Use Your Current username");
             error.status = 400;
             next(error);
             return;

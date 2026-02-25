@@ -44,6 +44,8 @@ app.use((req, res, next) => {
     // color the log based on the request method
     const method = req.method;
     let color = chalk.blue;
+    let time = chalk.blue;
+    let url = chalk.bgBlueBright;
     if (method === "GET")
     {
         color = chalk.green;
@@ -63,7 +65,7 @@ app.use((req, res, next) => {
         seconds: `2-digit`,
         hour12: false //use 24-hour clock
     });
-    console.log(color(`${req.method} ${req.url} received at ${timestamp}`));
+    console.log(color(`${req.method}`), url(`${req.url}`), `received at `, time(`${timestamp}`));
     next(); //forces the request to go to the next stage (another middleware or the end)
 });
 
