@@ -4,7 +4,6 @@ import {loginUser, logoutUser} from "../controllers/authController.js";
 const router = Router();
 
 router.post("/", loginUser);
-
 router.get('/logout', logoutUser);
 
 export default router;

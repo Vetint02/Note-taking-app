@@ -5,13 +5,9 @@ import { ensureAuthentication } from "../controllers/authController.js";
 const router = Router();
 
 router.get("/", ensureAuthentication, redirectToHome);
-
 router.get("/create", redirectToCreate);
-
 router.get("/update", ensureAuthentication, redirectToUpdate);
-
 router.post("/create", createUser);
-
 router.post("/update", ensureAuthentication, updateUser);
 
 export default router;
