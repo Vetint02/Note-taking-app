@@ -1,6 +1,5 @@
 import passport from "../config/passport.js"
 
-// I had AI help me create this logic to have it on separate file
 export const loginUser = (req, res, next) => {
     passport.authenticate('local', {
     successRedirect: '/notes', // Redirecting to show notes when authentication is successful
