@@ -162,7 +162,6 @@ footer {
     cursor: pointer;
 }
 
-/* Tilt it the other way on hover for a fun effect */
 .sticky-note:hover {
     transform: rotate(1deg) scale(1.05);
     background-color: #fff4a3;
@@ -175,27 +174,12 @@ footer {
     padding-bottom: 5px;
 }
 
-.sticky-note p {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Optional: handwriting font */
-    font-size: 0.9rem;
-}
-
 /* Reset the link styling */
 .sticky-link {
     text-decoration: none;
     color: inherit; /* Keeps the text black/dark as you styled it */
     display: block; /* Makes the whole area clickable */
     transition: transform 0.2s ease-in-out;
-}
-
-/* Optional: Slight lift effect when hovering over the link */
-.sticky-link:hover {
-    transform: scale(1.05);
-}
-
-.sticky-link:hover .sticky-note {
-    background-color: #fff4a3; /* Slightly brighter yellow on hover */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .post-id {
@@ -206,22 +190,21 @@ footer {
     color: rgba(0,0,0,0.4);
 }
 
-/* Specific styling for the Create Note card */
 .create-note {
-    text-decoration: none; /* Remove underline from <a> */
+    text-decoration: none;
     color: #333;
-    width: 230px;              /* Fixed width for the square look */
-    height: 230px;             /* Fixed height */
+    width: 230px;
+    height: 230px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the icon vertically */
-    align-items: center;     /* Center the icon horizontally */
-    border: 2px dashed rgba(0, 0, 0, 0.2); /* Dashed border looks like a placeholder */
-    background-color: #f9f9f9; /* Slightly different color so it stands out */
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9; 
 }
 
 .create-note:hover {
-    background-color: #fff4a3; /* Turns yellow on hover like the others */
+    background-color: #fff4a3;
     border-style: solid;
 }
 
@@ -260,7 +243,6 @@ footer {
     position: relative;
 }
 
-/* Title Input Styling */
 .sticky-header input {
     background: transparent;
     border: none;
@@ -315,9 +297,8 @@ footer {
     margin-top: 20px;
 }
 
-/* Styles for the Delete button */
 .delete-button {
-    background-color: #e74c3c; /* Red color */
+    background-color: #e74c3c;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -352,7 +333,7 @@ footer {
     padding: 15px;
     background: #f9f9f9;
     border-radius: 8px;
-    border-left: 5px solid #ffef7d; /* Sticky note yellow accent */
+    border-left: 5px solid #ffef7d;
 }
 
 .profile-actions {
@@ -361,7 +342,6 @@ footer {
     gap: 10px;
 }
 
-/* Reusable button styles */
 .btn-warning {
     background-color: #f39c12;
     color: white;
