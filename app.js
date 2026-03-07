@@ -24,9 +24,9 @@ connectDB();
 
 // Session setup (must be done before initializing Passport.js)
 app.use(session({
-    secret: "chocolate cookie", // random string used to sign the session ID cookie
-    resave: false, // don't save session if unmodified
-    saveuninitialized: false // don't create a session until something is stored
+    secret: "chocolate cookie",
+    resave: false,
+    saveuninitialized: false
 }));
 
 // Initialize Passport.js for authentication
