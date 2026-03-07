@@ -2,12 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Keeps the bar at the very top */
 .navbar {
     background-color: #333;
     color: white;
     position: fixed;
-    /* Fixes it to the top */
     top: 0;
     left: 0;
     width: 100%;
@@ -17,7 +15,7 @@ html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.nav-container {
+.nav_container {
     max-width: 1200px;
     padding: 0 20px;
     display: flex;
@@ -30,37 +28,33 @@ html {
     font-weight: bold;
 }
 
-.nav-links {
+.nav_links {
     list-style: none;
     display: flex;
     gap: 40px;
 }
 
-.nav-links a {
+.nav_links a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav_links a:hover {
     color: #00d1b2;
-    /* A nice highlight color */
 }
 
-.nav-links a.logout-link:hover {
+.nav_links a.logout_link:hover {
     color: #ff4b2b; /* A soft red color for logout */
 }
 
-.logout-item {
+.logout_item {
     margin-left: auto;
 }
 
-
-/* CRITICAL: Adds space so page content doesn't hide behind the bar */
 body {
     padding-top: 90px;
-    font-family: sans-serif;
     margin: 0;
 }
 
@@ -72,7 +66,6 @@ footer {
     text-align: center;
 }
 
-/* Centers the login box on the screen */
 .login-container {
     display: flex;
     justify-content: center;
@@ -123,21 +116,20 @@ footer {
     background-color: #555;
 }
 
-.new-user {
+.new_user {
     text-align: left;
     margin-top: 1rem;
 }
 
-.new-user a {
+.new_user a {
     color: #333;
     text-decoration: none;
 }
 
-.new-user a:hover{
+.new_user a:hover{
     text-decoration: underline;
 }
 
-/* The container that holds all the notes */
 .sticky-container {
     display: flex;
     flex-wrap: wrap; /* This makes them loop to the next line */
@@ -146,7 +138,6 @@ footer {
     justify-content: flex-start; /* Starts them from the left */
 }
 
-/* The individual sticky note box */
 .sticky-note {
     background-color: #ffef7d; /* Classic yellow */
     width: 200px;              /* Fixed width for the square look */
@@ -174,11 +165,10 @@ footer {
     padding-bottom: 5px;
 }
 
-/* Reset the link styling */
 .sticky-link {
     text-decoration: none;
-    color: inherit; /* Keeps the text black/dark as you styled it */
-    display: block; /* Makes the whole area clickable */
+    color: inherit;
+    display: block;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -216,28 +206,26 @@ footer {
 }
 
 .create-note p {
-    font-family: sans-serif; /* Keep the label clean */
     font-weight: bold;
     margin: 0;
 }
 
-/* Darkens the background to make the "pop up" stand out */
 .create-sticky-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh; /* Adjust based on your navbar height */
+    min-height: 80vh;
     padding: 20px;
 }
 
 .giant-sticky-note {
-    background-color: #ffef7d; /* Classic sticky yellow */
+    background-color: #ffef7d;
     width: 100%;
     max-width: 500px;
     height: 500px;
     padding: 30px;
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
-    transform: rotate(-1deg); /* Slight tilt for realism */
+    transform: rotate(-1deg);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -255,7 +243,6 @@ footer {
     font-family: inherit;
 }
 
-/* Body Textarea Styling */
 .sticky-body {
     flex-grow: 1;
 }
@@ -265,14 +252,12 @@ footer {
     border: none;
     width: 100%;
     height: 100%;
-    resize: none; /* Prevents user from breaking the square shape */
+    resize: none;
     font-size: 1.2rem;
     line-height: 1.5;
     outline: none;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Handwriting vibe */
 }
 
-/* Save Button Styling */
 .save-button {
     background-color: #333;
     color: white;
@@ -289,11 +274,10 @@ footer {
     background-color: #555;
 }
 
-/* Container for the buttons */
 .button-group {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-    gap: 15px; /* Space between buttons */
+    justify-content: flex-end;
+    gap: 15px;
     margin-top: 20px;
 }
 
